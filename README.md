@@ -5,8 +5,9 @@ A simple wrapper around the 'react-spinners' component ... when the spinner is d
 npm install --save spinner-container
 
 ## Importing
-
+```
 import SpinnerContainer from 'spinner-container'
+```
 
 ## Usage
 ```
@@ -29,6 +30,7 @@ class MyExample extends Component {
     }
 }
 ```
+
 ## Demo
 
 Download the spinner-container library
