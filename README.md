@@ -10,6 +10,7 @@ import SpinnerContainer from 'spinner-container'
 
 ## Usage
 
+{
 class MyExample extends Component {
     const spinnerColor = '#ABC';
 
@@ -27,6 +28,7 @@ class MyExample extends Component {
             </SpinnerContainer>
         );
     }
+}
 }
 
 ## Demo
