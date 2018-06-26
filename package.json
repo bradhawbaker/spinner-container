@@ -1,6 +1,6 @@
 {
   "name": "spinner-container",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "private": false,
   "dependencies": {
     "prop-types": "^15.6.2",
