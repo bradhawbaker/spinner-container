@@ -1,6 +1,6 @@
 {
   "name": "spinner-container",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": false,
   "dependencies": {
     "prop-types": "^15.6.2",
@@ -10,6 +10,11 @@
     "type": "git",
     "url": "https://www.npmjs.com/package/spinner-container"
   },
+  "files": [
+    "dist/",
+    "index.js",
+    "README.MD"
+  ],
   "scripts": {
     "start": "react-scripts start",
     "build": "rmdir dist /s /q & MD dist & SET NODE_ENV=production& babel src/spinnerContainer --out-dir dist --copy-files",
