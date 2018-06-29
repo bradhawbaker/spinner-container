@@ -3,6 +3,8 @@
   "version": "1.0.3",
   "private": false,
   "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
     "prop-types": "^15.6.2",
     "react-spinners": "^0.3.2"
   },
