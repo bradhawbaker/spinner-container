@@ -1,2 +1,2 @@
-import SpinnerContainer from './dist/SpinnerContainer';
+import SpinnerContainer from './SpinnerContainer';
 export {SpinnerContainer};
