@@ -11,7 +11,7 @@ export default class SpinnerContainer extends Component {
 
   render() {
     // if loading, show content as busy (ex: grey out)
-    const spinnerContentClass = this.props.loading ? 'spinner-content' : '';
+    const spinnerContentClass = this.props.loading ? 'spinner-content spinner-content-hidden' : 'spinner-content';
     return (
       <div className='spinner-container'>
         <div className='spinner'>
