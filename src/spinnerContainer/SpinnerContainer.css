@@ -1,6 +1,7 @@
 .spinner-container {
 	overflow: hidden;
 	position: relative;
+	height: 100%;
 }
 
 .spinner {
