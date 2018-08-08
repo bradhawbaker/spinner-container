@@ -35,6 +35,7 @@ class App extends Component {
   render() {
     return (
       <div style={mainContainer}>
+        <button onClick={ () => this.onToggleLoading()}>Toggle Spinner</button>
         <div style={containerStyle}>
           <SpinnerContainer
             loading={this.state.loading}
@@ -42,7 +43,6 @@ class App extends Component {
             <div style={contentStyle}>Spinner Container</div>
           </SpinnerContainer>
         </div>
-        <button onClick={ () => this.onToggleLoading()}>Toggle Spinner</button>
       </div>
     );
   }
