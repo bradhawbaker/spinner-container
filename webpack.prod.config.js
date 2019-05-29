@@ -6,7 +6,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = merge(core, {
   devtool: 'source-map',
-  entry: './src/spinnerContainer/SpinnerContainer.js',
+  entry: './index.js',
   externals: {
     "css-loader": "css-loader",
     "prop-types": "prop-types",
@@ -89,10 +89,6 @@ module.exports = merge(core, {
       chunkFilename: '[id].[hash].css',
     }),
   ],
-  output: {
-    path: __dirname + '/dist',
-    filename: 'spinnerContainerBundle.js'
-  },
   resolve: {
     extensions: ['*', '.js', '.jsx']
   }

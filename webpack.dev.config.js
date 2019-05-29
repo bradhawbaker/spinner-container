@@ -17,10 +17,6 @@ module.exports = merge(core, {
   resolve: {
     extensions: ['*', '.js', '.jsx']
   },
-  output: {
-    path: __dirname + '/dist',
-    filename: 'spinnerContainerBundle.js'
-  },
   plugins: [
     // use HtmlWebpackPlugin to auto generate the index.html file
     // based on a template (index_template)
