@@ -1,6 +1,6 @@
 {
   "name": "spinner-container",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "overlays a spinner component",
   "main": "/dist/spinner-container.bundle.js",
   "scripts": {
