@@ -26,5 +26,7 @@ export default class SpinnerContainer extends Component {
 }
 
 SpinnerContainer.propTypes = {
-  loading: PropTypes.bool
+  loading: PropTypes.bool,
+  color: PropTypes.string,
+  children: PropTypes.node
 };

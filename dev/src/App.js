@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SpinnerContainer from './spinnerContainer/SpinnerContainer';
+import SpinnerContainer from '../../src/spinnerContainer/SpinnerContainer';
 
 const COLOR_BLUE = '#009fdb';
 const mainContainer = {
