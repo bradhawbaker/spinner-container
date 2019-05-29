@@ -5,7 +5,12 @@ const merge = require('webpack-merge');
 const core = require('./webpack.core.config');
 
 module.exports = merge(core, {
-  entry: './dev/src/index.js',
+  entry: {
+    'spinner-container': './dev/src/index.js'
+  },
+  output: {
+    filename: '[name].bundle.js'
+  },
   module: {
     rules: [
       {

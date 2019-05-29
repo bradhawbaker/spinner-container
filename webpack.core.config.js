@@ -4,9 +4,6 @@ module.exports = {
   resolve: {
     extensions: ['*', '.js', '.jsx']
   },
-  output: {
-    filename: 'spinnercontainer.bundle.js'
-  },
   module: {
     rules: [
       {
