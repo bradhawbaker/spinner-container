@@ -1,2 +1,3 @@
-import SpinnerContainer from './spinnerContainer/SpinnerContainer';
-export {SpinnerContainer};
+import SpinnerContainer from './src/spinnerContainer/SpinnerContainer';
+
+export default SpinnerContainer;
