@@ -91,8 +91,7 @@ module.exports = merge(core, {
   ],
   output: {
     path: __dirname + '/dist',
-    publicPath: '/',
-    filename: 'spinnerContainer.js'
+    filename: 'spinnerContainerBundle.js'
   },
   resolve: {
     extensions: ['*', '.js', '.jsx']
