@@ -1,5 +1,4 @@
 // Core/base webpack config (to be combined with prod or dev config
-const path = require('path');
 module.exports = {
   resolve: {
     extensions: ['*', '.js', '.jsx']
