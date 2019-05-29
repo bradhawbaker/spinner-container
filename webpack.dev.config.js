@@ -1,4 +1,5 @@
 // for Hot Module Replacement
+const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
@@ -6,7 +7,9 @@ const core = require('./webpack.core.config');
 
 module.exports = merge(core, {
   entry: {
-    'spinner-container': './dev/src/index.js'
+    'spinner-container': [
+      path.join(__dirname, './dev/src', '/index.js')
+    ]
   },
   output: {
     filename: '[name].bundle.js'
