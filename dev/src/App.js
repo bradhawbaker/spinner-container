@@ -16,7 +16,7 @@ const contentStyle = {
   height: '220px',
   textAlign: 'center',
   fontSize: '50px',
-  marginTop: '80px'
+  paddingTop: '80px'
 };
 
 class App extends Component {

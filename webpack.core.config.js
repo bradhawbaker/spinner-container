@@ -1,10 +1,16 @@
 // Core/base webpack config (to be combined with prod or dev config
 module.exports = {
+  devtool: 'source-map',
   resolve: {
     extensions: ['*', '.js', '.jsx']
   },
   module: {
     rules: [
+      {
+        test: /\.(js|jsx)$/,
+        use: ["source-map-loader"],
+        enforce: "pre"
+      },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
@@ -20,7 +26,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/,
+        test: /\.(ttf|eot|otf)$/,
         use: [
           {
             loader: 'file-loader',
@@ -30,6 +36,19 @@ module.exports = {
             }
           }
         ],
+        exclude: /node_modules/
+      },
+      {
+        test: /\.svg/,
+        use: {
+          loader: 'svg-url-loader', // for importing svg images in css
+          options: {}
+        }
+      },
+      {
+        test: /\.(png|jpg)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {},
         exclude: /node_modules/
       }
     ]
