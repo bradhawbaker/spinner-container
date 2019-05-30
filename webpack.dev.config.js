@@ -26,10 +26,11 @@ module.exports = merge(core, {
               // only enable hot in development
               hmr: process.env.NODE_ENV === 'development',
               // if hmr does not work, this is a forceful method.
-              reloadAll: true,
+              // reloadAll: true,
+              sourceMap: true
             },
           },
-          'css-loader'
+          'css-loader',
         ]
       }
     ]
