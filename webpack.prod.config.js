@@ -6,6 +6,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = merge(core, {
+  devtool: 'source-map',
   entry: {
     'spinner-container': [
       path.join(__dirname, '/index.js')
@@ -40,7 +41,9 @@ module.exports = merge(core, {
   },
   optimization: {
     minimizer: [
-      new TerserPlugin(),
+      new TerserPlugin({
+        sourceMap: true
+      }),
       new OptimizeCSSAssetsPlugin()
     ]
   },

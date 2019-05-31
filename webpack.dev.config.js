@@ -7,6 +7,7 @@ const merge = require('webpack-merge');
 const core = require('./webpack.core.config');
 
 module.exports = merge(core, {
+  devtool: 'eval-source-map',
   entry: {
     'spinner-container': [
       path.join(__dirname, './dev/src', '/index.js')

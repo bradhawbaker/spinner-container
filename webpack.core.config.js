@@ -1,6 +1,5 @@
 // Core/base webpack config (to be combined with prod or dev config
 module.exports = {
-  devtool: 'source-map',
   resolve: {
     extensions: ['*', '.js', '.jsx']
   },
