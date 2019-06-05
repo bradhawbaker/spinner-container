@@ -2,7 +2,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const merge = require('webpack-merge');
 const core = require('./webpack.core.config');
 
@@ -21,17 +20,8 @@ module.exports = merge(core, {
       {
         test: /\.css$/,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              // only enable hot in development
-              hmr: process.env.NODE_ENV === 'development',
-              // if hmr does not work, this is a forceful method.
-              // reloadAll: true,
-              sourceMap: true
-            },
-          },
-          'css-loader',
+          { loader: 'style-loader' },
+          { loader: 'css-loader' }
         ]
       }
     ]
@@ -40,12 +30,6 @@ module.exports = merge(core, {
     extensions: ['*', '.js', '.jsx']
   },
   plugins: [
-    new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
-      filename: '[name].css',
-      chunkFilename: '[id].css',
-    }),
     // use HtmlWebpackPlugin to auto generate the index.html file
     // based on a template (index_template)
     new HtmlWebpackPlugin({

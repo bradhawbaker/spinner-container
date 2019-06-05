@@ -23,32 +23,6 @@ module.exports = {
           },
           'eslint-loader'
         ]
-      },
-      {
-        test: /\.(ttf|eot|otf)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'dist/images'
-            }
-          }
-        ],
-        exclude: /node_modules/
-      },
-      {
-        test: /\.svg/,
-        use: {
-          loader: 'svg-url-loader', // for importing svg images in css
-          options: {}
-        }
-      },
-      {
-        test: /\.(png|jpg)(\?.*)?$/,
-        loader: 'url-loader',
-        options: {},
-        exclude: /node_modules/
       }
     ]
   }
