@@ -6,7 +6,21 @@ import './SpinnerContainer.css';
 export default class SpinnerContainer extends Component {
   constructor(props) {
     super(props);
-    this.state = { loading: false };
+    this.state = { loading: true };
+  }
+
+  componentDidMount() {
+    this.setState({
+      loading: this.props.loading
+    })
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.loading !== prevProps.loading) {
+      this.setState({
+        loading: this.props.loading
+      });
+    }
   }
 
   render() {
@@ -15,7 +29,7 @@ export default class SpinnerContainer extends Component {
     return (
       <div className='spinner-container'>
         <div className='spinner'>
-          <ClipLoader color={this.props.color} loading={this.props.loading} />
+          <ClipLoader color={this.props.color} loading={this.state.loading} />
         </div>
         <div className={spinnerContentClass}>
           {this.props.children}
@@ -28,5 +42,10 @@ export default class SpinnerContainer extends Component {
 SpinnerContainer.propTypes = {
   loading: PropTypes.bool,
   color: PropTypes.string,
-  children: PropTypes.node
+  children: PropTypes.element
 };
+
+SpinnerContainer.defaultProps = {
+  color: "#000",
+  loading: true
+}
