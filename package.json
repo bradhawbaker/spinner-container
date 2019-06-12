@@ -1,6 +1,6 @@
 {
   "name": "spinner-container",
-  "version": "2.0.16",
+  "version": "2.0.19",
   "description": "overlays a spinner component",
   "main": "/dist/spinner-container.bundle.js",
   "scripts": {
@@ -27,8 +27,13 @@
       "@babel/preset-react"
     ],
     "plugins": [
-      "@babel/plugin-proposal-class-properties",
-      "emotion"
+      [
+        "emotion",
+        {
+          "sourceMap": true
+        }
+      ],
+      "@babel/plugin-proposal-class-properties"
     ]
   },
   "devDependencies": {
@@ -64,7 +69,8 @@
     "react-dom": "^16.8.6"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.10",
     "babel-plugin-emotion": "^10.0.13",
-    "react-spinners": "^0.3.2"
+    "react-spinners": "^0.5.4"
   }
 }

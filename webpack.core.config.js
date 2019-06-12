@@ -18,7 +18,15 @@ module.exports = {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env', '@babel/preset-react'],
-              plugins: ['@babel/plugin-proposal-class-properties']
+              plugins: [
+                [
+                  "emotion",
+                  {
+                    "sourceMap": true
+                  }
+                ],
+                '@babel/plugin-proposal-class-properties'
+              ]
             }
           },
           'eslint-loader'
