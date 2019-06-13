@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { ClipLoader } from 'react-spinners';
+import { CircleSpinner } from "react-spinners-kit";
 import './SpinnerContainer.css';
 
 export default class SpinnerContainer extends Component {
@@ -29,7 +29,7 @@ export default class SpinnerContainer extends Component {
     return (
       <div className='spinner-container'>
         <div className='spinner'>
-          <ClipLoader color={this.props.color} loading={this.state.loading} />
+          <CircleSpinner color={this.props.color} loading={this.state.loading} />
         </div>
         <div className={spinnerContentClass}>
           {this.props.children}
