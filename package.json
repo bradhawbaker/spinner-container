@@ -1,6 +1,6 @@
 {
   "name": "spinner-container",
-  "version": "3.0.0",
+  "version": "3.0.2",
   "description": "overlays a spinner component",
   "main": "/dist/spinner-container.bundle.js",
   "scripts": {
@@ -45,6 +45,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.13.0",
     "html-webpack-plugin": "^3.2.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
     "prettier": "1.17.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
