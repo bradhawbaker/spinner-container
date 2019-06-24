@@ -1,6 +1,7 @@
 const path = require('path');
 const merge = require('webpack-merge');
 const core = require('./webpack.core.config');
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const TerserJSPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
@@ -33,6 +34,9 @@ module.exports = merge(core, {
       }
     ]
   },
+  plugins: [
+    new CleanWebpackPlugin()
+  ],
   optimization: {
     minimizer: [
       new TerserJSPlugin({ sourceMap: true }),
