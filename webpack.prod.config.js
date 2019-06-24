@@ -5,13 +5,12 @@ const TerserJSPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = merge(core, {
+  mode: 'production',
   entry: {
-    'spinner-container': [
-      path.join(__dirname, '/index.js')
-    ]
+    'spinner-container': './index.js'
   },
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist'),
     filename: '[name].bundle.js',
     publicPath: '/',
     library: 'spinnerContainer',
@@ -23,22 +22,21 @@ module.exports = merge(core, {
     'prop-types'
   ],
   devtool: "source-map",
-  mode: 'production',
   module: {
     rules: [
       {
         test: /\.css$/,
         use: [
-          { loader: 'style-loader' },
-          { loader: 'css-loader' }
+          "style-loader", //2. Inject styles into DOM
+          "css-loader", //1. Turns css into commonjs
         ]
       }
     ]
   },
   optimization: {
-    minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
-  },
-  resolve: {
-    extensions: ['*', '.js', '.jsx']
+    minimizer: [
+      new TerserJSPlugin({ sourceMap: true }),
+      new OptimizeCSSAssetsPlugin({})
+    ]
   }
 });

@@ -6,28 +6,25 @@ const merge = require('webpack-merge');
 const core = require('./webpack.core.config');
 
 module.exports = merge(core, {
+  mode: "development",
   devtool: 'eval-source-map',
   entry: {
-    'spinner-container': [
-      path.join(__dirname, './dev/src', '/index.js')
-    ]
+    'spinner-container': './dev/src/index.js'
   },
   output: {
-    filename: '[name].bundle.js'
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, "dist")
   },
   module: {
     rules: [
       {
         test: /\.css$/,
         use: [
-          { loader: 'style-loader' },
-          { loader: 'css-loader' }
+          "style-loader", //2. Inject styles into DOM
+          "css-loader", //1. Turns css into commonjs
         ]
       }
     ]
-  },
-  resolve: {
-    extensions: ['*', '.js', '.jsx']
   },
   plugins: [
     // use HtmlWebpackPlugin to auto generate the index.html file
